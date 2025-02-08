@@ -115,7 +115,7 @@ openpyxl
 # SQL DATABASES
 # ======================================================
 
-sqlite3
+# sqlite3 - changed this to read only as Python already has sqlite3 installed by default
 
 # ======================================================
 # DATA PROCESSING & ANALYSIS
