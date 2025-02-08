@@ -12,6 +12,6 @@ The following steps is how I created this project using VSCode on macOS. Dependi
 1. Create repo named datafun-05-sql in github 
 2. Clone down to local machine
 3. Added .gitignore, requirements.txt, and utils_logger.py
--files are in this repository and can be copied into the file
+- files are in this repository and can be copied into the file
 
 --------- To Be Continued
