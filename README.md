@@ -14,9 +14,9 @@ The following steps is how I created this project using VSCode on macOS. Dependi
 3. Added .gitignore, requirements.txt, and utils_logger.py
 - files are in this repository and can be copied into the file
 4. Create virtual environment
-'''shell
+```
 python3 -m venv .venv
-'''
+```
 
 ## Step 2: First Iteration
 This step activated required items and created folders to organize and prepare for the duration of the project
