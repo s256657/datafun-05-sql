@@ -22,18 +22,18 @@ python3 -m venv .venv
 This step activated required items and created folders to organize and prepare for the duration of the project
 
 1. Activate virtual environment
-'''
+```
 source .venv/bin/activate
-'''
+```
 2. Install dependencies
-'''
+```
 python3 -m pip install --upgrade pip setuptools wheel
 python3 -m pip install -r requirements.txt
-'''
+```
 - Note: based on my version of python I changed sqlite3 to read only as an error occured because python already had sqlite3 installed.
-'''
+```
 python3 utils_logger.py
-'''
+```
 3. Organized project by creating folders and subfolders
 - sql_create: 01_drop_tables.sql, 02_create_tables.sql, 03_insert_tables.sql, db01_setup.py
 - sql_features: update_records.sql, delete_records.sql, 
@@ -42,7 +42,7 @@ python3 utils_logger.py
 ## Create simple database with two related tables
 1. Create folder "data" then two subfolders named "authors.csv" and "books.csv"
 2. Data to be added in authors.csv
-'''
+```
 author_id,first,last
 10f88232-1ae7-4d88-a6a2-dfcebb22a596,Harper,Lee
 c3a47e85-2a6b-4196-a7a8-8b55d8fc1f70,George,Orwell
@@ -54,9 +54,9 @@ e0b75863-866d-4db4-85c7-df9bb8ee6dab,F. Scott,Fitzgerald
 16f3e0a1-24cb-4ed6-a50d-509f63e367f7,J.R.R.,Tolkien
 06cf58ab-90f1-448d-8e54-055e4393e75c,J.R.R.,Tolkien
 6b693b96-394a-4a1d-a4e2-792a47d7a568,J.K.,Rowling
-'''
+```
 3. Data to be added in books.csv
-'''
+```
 book_id,title,year_published,author_id
 d6f83870-ff21-4a5d-90ab-26a49ab6ed12,To Kill a Mockingbird,1960,10f88232-1ae7-4d88-a6a2-dfcebb22a596
 0f5f44f7-44d8-4f49-b8c4-c64d847587d3,1984,1949,c3a47e85-2a6b-4196-a7a8-8b55d8fc1f70
@@ -68,6 +68,6 @@ c6e67918-e509-4a6b-bc3a-979f6ad802f0,Pride and Prejudice,1813,4dca0632-2c53-490c
 be951205-6cc2-4b3d-96f1-7257b8fc8c0f,The Hobbit,1937,16f3e0a1-24cb-4ed6-a50d-509f63e367f7
 dce0f8f2-d3ed-48a9-b8ff-960b6baf1f6f,The Lord of the Rings,1954,06cf58ab-90f1-448d-8e54-055e4393e75c
 ca8e64c3-1e67-47f5-82cc-3e4e30f63b75,Harry Potter and the Philosopher's Stone,1997,6b693b96-394a-4a1d-a4e2-792a47d7a568
-'''
+```
 
 ------To Be Continued
