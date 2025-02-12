@@ -5,6 +5,13 @@
 This project is to begin integrating Python and SQL using SQLite.
 Skills used will be creating and managing a database, building a schema, and performing various SQL operations including queries with joins, filters, and aggregations.
 
+## Commands to run script project
+Below are the following commands in order to run the project as designed. Details in created the project follow.
+
+1. To initialize and create tables
+``` python3 db01_setup.py ```
+
+
 The following steps is how I created this project using VSCode on macOS. Depending on tools you are using steps could be slightly different
 
 ## Step 1: Create project and add basic requirements
@@ -39,7 +46,7 @@ python3 utils_logger.py
 - sql_features: update_records.sql, delete_records.sql, 
 - sql_queries: query_aggregation.sql, query_filter.sql, query_group_by.sql, query_join.sql, query_sorting.sql, db03_queries.py
 
-## Create simple database with two related tables
+## Step 3: Create simple database with two related tables
 1. Create folder "data" then two subfolders named "authors.csv" and "books.csv"
 2. Data to be added in authors.csv
 ```
@@ -70,4 +77,12 @@ dce0f8f2-d3ed-48a9-b8ff-960b6baf1f6f,The Lord of the Rings,1954,06cf58ab-90f1-44
 ca8e64c3-1e67-47f5-82cc-3e4e30f63b75,Harry Potter and the Philosopher's Stone,1997,6b693b96-394a-4a1d-a4e2-792a47d7a568
 ```
 
-------To Be Continued
+## Step 4: Initialize Data Base
+This step utilizes sql_create folder and db01_setup.py to complete. 
+
+1. Add code to 01_drop_tables.sql, 02_create_tables.sql, and 03_insert_records.sql
+2. Add code to db01_setup.py as this is what will run to initialize the database
+- Order is important must drop first or create tables will not run properly
+3. An SQL viewer is required to see the final product
+- If using VS Code search and install SQLite Viewer
+- (optional) another SQL viewer can be used but the SQLite Viewer within VSCode is simple to install and run
