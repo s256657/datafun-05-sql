@@ -100,9 +100,32 @@ def perform_inner_join():
     except sqlite3.Error as e:
         print("Error executing query:", e)
 
+def perform_books_query():
+    try:
+        # Connecting to the SQLite database
+        with sqlite3.connect(db_file) as conn:
+            cursor = conn.cursor()
+
+            # Executing the SELECT query to fetch all books sorted by year_published
+            cursor.execute("SELECT * FROM books ORDER BY year_published;")
+
+            # Fetch all rows matching the query
+            rows = cursor.fetchall()
+
+            if rows:
+                print("Books sorted by year published:")
+                for row in rows:
+                    print(row)  # Print each row
+            else:
+                print("No books found.")
+
+    except sqlite3.Error as e:
+        print("Error executing query:", e)
+
 def main():
     perform_aggregations()
     perform_inner_join()
+    perform_books_query()
 
 if __name__ == "__main__":
     main()
