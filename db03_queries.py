@@ -34,8 +34,22 @@ def perform_aggregations():
             last_published = cursor.fetchone()[0]
             print(f"Last published book year: {last_published}")
 
+            # Execute the SELECT query to get books published after 1950
+            cursor.execute("SELECT * FROM books WHERE year_published > 1950")
+            
+            # Fetch all rows matching the query
+            rows = cursor.fetchall()
+
+            if rows:
+                print("Books published after 1950:")
+                for row in rows:
+                    print(row)  # Print each book's details (each row is a tuple)
+            else:
+                print("No books found published after 1950.")
+
     except sqlite3.Error as e:
-        print("Error in aggregations:", e)
+        print("Error executing query:", e)
+
 
 def main():
     perform_aggregations()
