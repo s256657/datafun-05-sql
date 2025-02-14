@@ -71,13 +71,38 @@ def perform_aggregations():
                     print(f"{row[0]}: {row[1]} books")
             else:
                 print("No books found.")
+    except sqlite3.Error as e:
+        print("Error in aggregations:", e)
+
+def perform_inner_join():
+    try:
+        with sqlite3.connect(db_file) as conn:
+            cursor = conn.cursor()
+
+            # Execute the INNER JOIN query to get author names and book titles
+            cursor.execute("""
+                SELECT first, title
+                FROM authors
+                INNER JOIN books
+                ON authors.author_id = books.author_id;
+            """)
+
+            # Fetch all rows matching the query
+            rows = cursor.fetchall()
+
+            if rows:
+                print("Authors and their books:")
+                for row in rows:
+                    print(f"Author: {row[0]}, Book Title: {row[1]}")
+            else:
+                print("No matching authors and books found.")
 
     except sqlite3.Error as e:
         print("Error executing query:", e)
 
-
 def main():
     perform_aggregations()
+    perform_inner_join()
 
 if __name__ == "__main__":
     main()
