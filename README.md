@@ -10,7 +10,10 @@ Below are the following commands in order to run the project as designed. Detail
 
 1. To initialize and create tables
 ``` python3 db01_setup.py ```
-
+2. To run features which will delete a record and update the table
+``` python3 db02_features.py ```
+3. To run queries
+``` python3 db03_queries.py ```
 
 The following steps is how I created this project using VSCode on macOS. Depending on tools you are using steps could be slightly different
 
@@ -86,3 +89,18 @@ This step utilizes sql_create folder and db01_setup.py to complete.
 3. An SQL viewer is required to see the final product
 - If using VS Code search and install SQLite Viewer
 - (optional) another SQL viewer can be used but the SQLite Viewer within VSCode is simple to install and run
+
+## Step 5 Add features
+This step utilizes sql_features folder and db02_features.py
+
+1. Add code to delete_records.sql and update_records.sql
+- This changes the table created in Step 4
+2. Add code to db02_features.py to execute the code in delete_records and update_records
+
+## Step 6 Queries
+This step utilizes sql_queries folder and db03_queries.py
+
+1. Add code for the different files within sql_queries folder
+- All can be run with single execution command see files for code entered
+2. Add execute code to db03_queries.py
+- the code input will display results within terminal
